@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 要设置对应的空间，对应的是dao接口 -->
+<mapper namespace="com.turtle.demo.dao.ItemsMapper">
+    <!-- 对应的是接口中的方法，主要返回值和参数，这里的返回值用的是替代值 -->
+    <select id="findById" resultType="items" parameterType="int">
+      select * from items where id = #{id};
+    </select>
+</mapper>
